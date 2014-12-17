@@ -1,13 +1,16 @@
-// Require pixi module
-var pixi = require('pixi');
+// Require PIXI module
+var PIXI = require('PIXI');
+
+// scale to window, maintain
+PIXI.BaseTexture.SCALE_MODE.DEFAULT = PIXI.BaseTexture.SCALE_MODE.NEAREST;
 
 // You can use either WebGLRenderer or CanvasRenderer
-var renderer = new pixi.WebGLRenderer(800, 600);
+var renderer = new PIXI.WebGLRenderer(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.view);
 
-var stage = new pixi.Stage();
-var bunnyTexture = pixi.Texture.fromImage("images/bunny.png");
-var bunny = new pixi.Sprite(bunnyTexture);
+var stage = new PIXI.Stage();
+var bunnyTexture = PIXI.Texture.fromImage("images/bunny.png");
+var bunny = new PIXI.Sprite(bunnyTexture);
 
 bunny.position.x = 400;
 bunny.position.y = 300;

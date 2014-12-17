@@ -1,28 +1,26 @@
-// Require PIXI module
-var PIXI = require('PIXI');
+var Phaser = require('phaser');
 
-// scale to window, maintain
-PIXI.BaseTexture.SCALE_MODE.DEFAULT = PIXI.BaseTexture.SCALE_MODE.NEAREST;
+var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.WEBGL, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
-// You can use either WebGLRenderer or CanvasRenderer
-var renderer = new PIXI.WebGLRenderer(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.view);
+function preload() {
+  game.load.image('flyer', 'images/logo.png');
+}
 
-var stage = new PIXI.Stage();
-var bunnyTexture = PIXI.Texture.fromImage("images/bunny.png");
-var bunny = new PIXI.Sprite(bunnyTexture);
+var image;
 
-bunny.position.x = 400;
-bunny.position.y = 300;
-bunny.scale.x = 2;
-bunny.scale.y = 2;
+function create() {
+  game.renderer.autoResize = true;
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  image = game.add.sprite(0, 0, 'flyer');
+  game.physics.enable(image, Phaser.Physics.ARCADE);
+  image.body.velocity.setTo(200,200);
+  image.body.collideWorldBounds = true;
+  image.body.bounce.set(1);
+}
 
-stage.addChild(bunny);
+function update () {
+}
 
-requestAnimationFrame(animate);
-
-function animate() {
-    bunny.rotation += 0.01;
-    renderer.render(stage);
-    requestAnimationFrame(animate);
+function render () {
+  // game.debug.spriteInfo(image,32,32);
 }

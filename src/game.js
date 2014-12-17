@@ -1,12 +1,15 @@
 // Require pixi module
 var pixi = require('pixi');
 
+console.log(pixi);
+
+
 // You can use either WebGLRenderer or CanvasRenderer
-var renderer = pixi.WebGLRenderer(800, 600);
+var renderer = new pixi.WebGLRenderer(800, 600);
 document.body.appendChild(renderer.view);
 
 var stage = new pixi.Stage();
-var bunnyTexture = pixi.Texture.fromImage("bunny.png");
+var bunnyTexture = pixi.Texture.fromImage("images/bunny.png");
 var bunny = new pixi.Sprite(bunnyTexture);
 
 bunny.position.x = 400;

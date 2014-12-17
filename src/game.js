@@ -1,9 +1,6 @@
 // Require pixi module
 var pixi = require('pixi');
 
-console.log(pixi);
-
-
 // You can use either WebGLRenderer or CanvasRenderer
 var renderer = new pixi.WebGLRenderer(800, 600);
 document.body.appendChild(renderer.view);

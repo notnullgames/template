@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "Basic quick-start template for making HTML5 games",
+  "dependencies": {
+    "pixi": ""
+  },
+  "devDependencies": {
+    "beefy": "",
+    "browserify": "",
+    "uglifyjs": "",
+    "trash": "konsumer/trash"
+  },
+  "scripts": {
+    "start": "beefy src/game.js:app.js --live --open",
+    "dev": "npm run clean && browserify src/game.js -o app.js",
+    "prod": "npm run clean && browserify src/game.js -o app.js && uglify app.js -o app.min.js",
+    "clean": "trash --force app.js app.min.js"
+  },
+  "author": "konsumer",
+  "license": "MIT"
+}

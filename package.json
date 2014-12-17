@@ -8,13 +8,13 @@
   "devDependencies": {
     "beefy": "",
     "browserify": "",
-    "uglifyjs": "",
+    "uglify-js": "",
     "trash": "konsumer/trash"
   },
   "scripts": {
     "start": "beefy src/game.js:app.js --open",
     "dev": "npm run clean && browserify src/game.js -o app.js",
-    "prod": "npm run clean && browserify src/game.js -o app.js && uglify app.js -o app.min.js",
+    "prod": "npm run clean && browserify src/game.js -o app.js && uglifyjs app.js -o app.min.js",
     "clean": "trash --force app.js app.min.js"
   },
   "author": "konsumer",

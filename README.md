@@ -11,7 +11,7 @@ npm i
 ## usage
 
 ```
-npm start # run reloading development server
+npm start     # run reloading development server
 npm run build # build production copy of your game in www/
 ```
 

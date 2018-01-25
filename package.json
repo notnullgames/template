@@ -1,22 +1,27 @@
 {
-  "name": "template",
-  "version": "0.0.1",
-  "description": "Basic quick-start template for making HTML5 games",
-  "dependencies": {
-    "phaser": "notnullgames/phaser"
+  "name": "phaser_game",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
   "devDependencies": {
-    "beefy": "",
-    "browserify": "",
-    "uglify-js": "",
-    "trash": "konsumer/trash"
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "expose-loader": "^0.7.4",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   },
-  "scripts": {
-    "start": "beefy src/game.js:app.js --open",
-    "dev": "npm run clean && browserify src/game.js -o app.js",
-    "prod": "npm run clean && browserify src/game.js -o app.js && uglifyjs app.js -o app.min.js",
-    "clean": "trash --force app.js app.min.js"
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
-  "author": "konsumer",
-  "license": "MIT"
+  "dependencies": {
+    "phaser-ce": "^2.10.0",
+    "webfontloader": "^1.6.28"
+  }
 }

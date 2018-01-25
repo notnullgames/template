@@ -1,38 +1,18 @@
-notnull game template
-=============
+# notnull game template
 
-Basic quick-start template for making HTML5 games
+This is a lightweight webpack ES6 game-starter for phaser. You can use it to quickly make ES6-based HTML5 games.
 
-### Installation
+## installation
 
-Installation is dead easy and assumes you have already installed node.js and npm.
+```
+npm i
+```
 
-Download and extract the template and cd into it from the command line.
+## usage
 
-    npm install    
+```
+npm start # run reloading development server
+npm run build # build production copy of your game in www/
+```
 
-Done? Awesome.
-
-### Running
-
-Now, still at the root directory, we can either run the following command:
-
-    npm start    
-
-Done!
-
-### Building
-
-You can build a standalone js file with
-
-    npm run build
-
-And you can build a minified version with
-
-    npm run prod
-
-### Cleaning
-
-Just do this to delete the built files:
-
-    npm run clean
+Put your assets in `www/assets` and your code in `src/`.

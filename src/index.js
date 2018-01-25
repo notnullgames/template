@@ -19,4 +19,4 @@ export const create = () => {
   game.state.start('Boot')
 }
 
-window.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', { preload, create })
+window.game = new Phaser.Game(1280, 720, Phaser.AUTO, 'content', { preload, create })

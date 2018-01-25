@@ -6,7 +6,7 @@
     "start": "webpack-dev-server",
     "build": "webpack",
     "deploy": "gh-pages-deploy",
-    "DELETE_SOURCE": "rimraf README.md src package.json webpack.config.babel.js"
+    "DELETE_SOURCE": "rimraf README.md src package.json package-lock.json webpack.config.babel.js"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",

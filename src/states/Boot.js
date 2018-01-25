@@ -4,14 +4,14 @@ import WebFont from 'webfontloader'
 const style = {
   text: {
     font: '16px Arial',
-    fill: '#dddddd',
+    fill: '#ffffff',
     align: 'center'
   }
 }
 
 export default class extends Phaser.State {
   init () {
-    this.stage.backgroundColor = '#EDEEC9'
+    this.stage.backgroundColor = '#000000'
     this.fontsReady = false
     this.fontsLoaded = this.fontsLoaded.bind(this)
   }

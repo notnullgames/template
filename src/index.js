@@ -6,26 +6,17 @@ import BootState from './states/Boot'
 import SplashState from './states/Splash'
 import GameState from './states/Game'
 
-const config = {
-  gameWidth: 760,
-  gameHeight: 400,
-  localStorageName: 'phaseres6webpack'
+import './index.css'
+
+export const preload = () => {
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL
 }
 
-class Game extends Phaser.Game {
-  constructor () {
-    const docElement = document.documentElement
-    const width = docElement.clientWidth > config.gameWidth ? config.gameWidth : docElement.clientWidth
-    const height = docElement.clientHeight > config.gameHeight ? config.gameHeight : docElement.clientHeight
-
-    super(width, height, Phaser.CANVAS, 'content', null)
-
-    this.state.add('Boot', BootState, false)
-    this.state.add('Splash', SplashState, false)
-    this.state.add('Game', GameState, false)
-
-    this.state.start('Boot')
-  }
+export const create = () => {
+  game.state.add('Boot', BootState, false)
+  game.state.add('Splash', SplashState, false)
+  game.state.add('Game', GameState, false)
+  game.state.start('Boot')
 }
 
-window.game = new Game()
+window.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', { preload, create })

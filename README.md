@@ -2,6 +2,8 @@
 
 This is a lightweight webpack ES6 game-starter for phaser. You can use it to quickly make ES6-based HTML5 games.
 
+You can see the demo running [here](http://notnullgames.github.io/template/).
+
 ## installation
 
 ```

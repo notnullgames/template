@@ -5,6 +5,10 @@ This is a lightweight webpack ES6 game-starter for phaser. You can use it to qui
 ## installation
 
 ```
+git clone --depth 1 https://github.com/notnullgames/template.git mygame
+cd mygame
+git remote rename origin template
+git remote add origin https://github.com/user/repo.git
 npm i
 ```
 
